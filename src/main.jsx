@@ -6,6 +6,9 @@ import { createRoot } from 'react-dom/client'
 import MyPromisesAll from './functions/MyPromisesAll'
 import './index.css'
 import MyFetchAPIs from './functions/MyFetch'
+import MyFetchPost from './functions/MyFetchPost'
+import MyFetchPut from './functions/MyFetchPut'
+import MyFetchBlob from './functions/MyFetchBlob'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +16,9 @@ createRoot(document.getElementById('root')).render(
     {/* <MyFunctions/> */}
     {/* <MyPromises/> */}
     {/* <MyPromisesAll/> */}
-    <MyFetchAPIs/>
+    {/* <MyFetchAPIs/> */}
+    {/* <MyFetchPost/> */}
+    {/* <MyFetchPut/> */}
+    <MyFetchBlob/>
   </StrictMode>,
 )
