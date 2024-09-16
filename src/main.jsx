@@ -9,6 +9,7 @@ import MyFetchAPIs from './functions/MyFetch'
 import MyFetchPost from './functions/MyFetchPost'
 import MyFetchPut from './functions/MyFetchPut'
 import MyFetchBlob from './functions/MyFetchBlob'
+import MyDataTypes from './methods/MyDataTypes'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')).render(
     {/* <MyFetchAPIs/> */}
     {/* <MyFetchPost/> */}
     {/* <MyFetchPut/> */}
-    <MyFetchBlob/>
+    {/* <MyFetchBlob/> */}
+    <MyDataTypes/>
   </StrictMode>,
 )
