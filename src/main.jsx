@@ -10,6 +10,8 @@ import MyFetchPost from './functions/MyFetchPost'
 import MyFetchPut from './functions/MyFetchPut'
 import MyFetchBlob from './functions/MyFetchBlob'
 import MyDataTypes from './methods/MyDataTypes'
+import MyObjects from './methods/MyObjects'
+import { Contador } from './components/Contador'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +23,8 @@ createRoot(document.getElementById('root')).render(
     {/* <MyFetchPost/> */}
     {/* <MyFetchPut/> */}
     {/* <MyFetchBlob/> */}
-    <MyDataTypes/>
+    {/* <MyDataTypes/> */}
+    {/* <MyObjects/> */}
+    <Contador/>
   </StrictMode>,
 )
