@@ -15,6 +15,7 @@ import { Contador } from './components/Contador'
 import { ContadorHook } from './components/ContadorHook'
 import { Login } from './components/Login'
 import { Usuarios } from './components/Usuarios'
+import { Formularios } from './components/Formularios'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -31,6 +32,7 @@ createRoot(document.getElementById('root')).render(
     {/* <Contador/> */}
     {/* <ContadorHook/> */}
     {/* <Login/> */}
-    <Usuarios/>
+    {/* <Usuarios/> */}
+    <Formularios/>
   </StrictMode>,
 )
