@@ -1,20 +1,47 @@
-import { React, useEffect, useState } from 'react'
+import { React, useEffect, useState, useRef } from 'react'
 import reqRespApi from '../api/reqRes'
 
 
 export const Usuarios = () => {
     const [usuarios, setUsuarios] = useState([]);
+    const refPage = useRef(1);
 
-    useEffect(() => {
+
+    const cargarUsuarios = async (isButtonClick=false) => {
+        const response = await
         //Llamado de la API
-        reqRespApi.get('/users')
+        reqRespApi.get('/users',{
+            params: {
+                page: refPage.current
+            }
+        })
             .then(resp => {
-                console.log(resp);
-                console.log(resp.data.data);
-                setUsuarios(resp.data.data);
+                if(resp.data.data.length > 0){
+                    if (isButtonClick){
+                        refPage.current++
+                        setUsuarios(resp.data.data);
+                    }
+                     setUsuarios(resp.data.data);
+                    
+                    
+                }
+                else{
+                    alert('No hay más registros');
+                }
+                console.log(refPage.current)
+                
+                
             })
             .catch(err => console.log(err))
+    }
+
+    
+
+    useEffect(() => {
+        //Llamado de la función cargarUsuarios
+        cargarUsuarios();
     }, [])
+
 
     return (
         <>
@@ -51,6 +78,7 @@ export const Usuarios = () => {
                     }
                 </tbody>
             </table>
+            <button onClick={()=>cargarUsuarios(true)}>Siguiente</button>
 
         </>
     )
